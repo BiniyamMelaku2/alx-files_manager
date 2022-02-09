@@ -3,6 +3,7 @@ const AppController = require('../controllers/AppController');
 
 function controllerRouting(app) {
   const router = express.Router();
+  app.use(express.json());
   app.use('/', router);
 
   router.get('/status', (req, res) => {

@@ -7,6 +7,6 @@ const port = process.env.DB_PORT || 5000;
 controllerRouting(app);
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`Express Server app running on http://localhost:${port}/`);
 });
 module.exports = app;
