@@ -4,7 +4,7 @@ const dbClient = require('../utils/db');
 class AppController {
   static getStatus(request, response) {
     response.status(200).send(
-      `{"redis": ${redisClient.isAlive()}, "db": ${dbClient.isAlive()}}`,
+      `{"redis":${redisClient.isAlive()}, "db":${dbClient.isAlive()}}`,
     );
   }
 
@@ -12,7 +12,7 @@ class AppController {
     const nbusers = await dbClient.nbUsers();
     const nbfiles = await dbClient.nbFiles();
     response.status(200).send(
-      `{"users": ${nbusers}, "files": ${nbfiles}}`,
+      `{"users":${nbusers}, "files":${nbfiles}}`,
     );
   }
 }
